@@ -60,6 +60,11 @@
                                         <constraint firstItem="knT-Nr-0FJ" firstAttribute="leading" secondItem="pEe-oI-qha" secondAttribute="leading" id="xQ4-mS-nLo"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="animalImage" destination="knT-Nr-0FJ" id="l63-G0-vUz"/>
+                                    <outlet property="classificationLabel" destination="4T0-Q6-PXz" id="EkC-Ye-MVO"/>
+                                    <outlet property="nameLabel" destination="Ywc-BZ-P3l" id="phl-or-R0g"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

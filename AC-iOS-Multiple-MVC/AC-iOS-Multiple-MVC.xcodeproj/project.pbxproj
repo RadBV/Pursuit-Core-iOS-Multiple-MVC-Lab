@@ -52,6 +52,24 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1D5D20AF2303586E00527CDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
+				1D5D20AD2303581600527CDA /* ZooAnimalData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D5D20B02303587B00527CDA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
+				1D5D20A92303559600527CDA /* AnimalListTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		DE07F5521FAB611300DA3ABA = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +89,8 @@
 		DE07F55D1FAB611300DA3ABA /* AC-iOS-Multiple-MVC */ = {
 			isa = PBXGroup;
 			children = (
-				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
-				1D5D20AD2303581600527CDA /* ZooAnimalData.swift */,
-				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
-				1D5D20A92303559600527CDA /* AnimalListTableViewController.swift */,
+				1D5D20AF2303586E00527CDA /* Models */,
+				1D5D20B02303587B00527CDA /* View Controllers */,
 				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
 				1D5D20AB2303574E00527CDA /* AnimalListCell.swift */,
 				1D5D20A8230354F900527CDA /* Supporting Files */,

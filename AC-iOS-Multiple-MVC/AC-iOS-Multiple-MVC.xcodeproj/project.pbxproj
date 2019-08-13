@@ -10,8 +10,8 @@
 		1D5D20AA2303559600527CDA /* AnimalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D20A92303559600527CDA /* AnimalListTableViewController.swift */; };
 		1D5D20AC2303574F00527CDA /* AnimalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D20AB2303574E00527CDA /* AnimalListCell.swift */; };
 		1D5D20AE2303581600527CDA /* ZooAnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D20AD2303581600527CDA /* ZooAnimalData.swift */; };
+		1D5D20B22303656E00527CDA /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D20B12303656E00527CDA /* AnimalDetailViewController.swift */; };
 		DE07F55F1FAB611300DA3ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */; };
-		DE07F5611FAB611300DA3ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F5601FAB611300DA3ABA /* ViewController.swift */; };
 		DE07F5641FAB611300DA3ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5621FAB611300DA3ABA /* Main.storyboard */; };
 		DE07F5661FAB611300DA3ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5651FAB611300DA3ABA /* Assets.xcassets */; };
 		DE07F5691FAB611300DA3ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */; };
@@ -22,9 +22,9 @@
 		1D5D20A92303559600527CDA /* AnimalListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListTableViewController.swift; sourceTree = "<group>"; };
 		1D5D20AB2303574E00527CDA /* AnimalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListCell.swift; sourceTree = "<group>"; };
 		1D5D20AD2303581600527CDA /* ZooAnimalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimalData.swift; sourceTree = "<group>"; };
+		1D5D20B12303656E00527CDA /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		DE07F55B1FAB611300DA3ABA /* AC-iOS-Multiple-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-Multiple-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE07F55E1FAB611300DA3ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE07F5601FAB611300DA3ABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE07F5631FAB611300DA3ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE07F5651FAB611300DA3ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE07F5681FAB611300DA3ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		1D5D20B02303587B00527CDA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DE07F5601FAB611300DA3ABA /* ViewController.swift */,
+				1D5D20B12303656E00527CDA /* AnimalDetailViewController.swift */,
 				1D5D20A92303559600527CDA /* AnimalListTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -172,9 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE07F5611FAB611300DA3ABA /* ViewController.swift in Sources */,
 				DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */,
 				1D5D20AC2303574F00527CDA /* AnimalListCell.swift in Sources */,
+				1D5D20B22303656E00527CDA /* AnimalDetailViewController.swift in Sources */,
 				DE07F55F1FAB611300DA3ABA /* AppDelegate.swift in Sources */,
 				1D5D20AE2303581600527CDA /* ZooAnimalData.swift in Sources */,
 				1D5D20AA2303559600527CDA /* AnimalListTableViewController.swift in Sources */,

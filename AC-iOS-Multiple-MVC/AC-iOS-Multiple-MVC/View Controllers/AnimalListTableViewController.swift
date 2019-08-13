@@ -49,6 +49,13 @@ class AnimalListTableViewController: UITableViewController {
         return 70
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyBoard.instantiateViewController(withIdentifier: "animalDetailViewController") as? AnimalDetailViewController {
+            viewController.zooAnimal = animals[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -85,14 +92,30 @@ class AnimalListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue") }
+     
+         switch segueIdentifier {
+         case "listToDetailSegue":
+            guard let animalDetailVC = segue.destination as? AnimalDetailViewController else {
+                fatalError("Unexpected segue VC")
+            }
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
+                fatalError("No row was selected")
+            }
+            animalDetailVC.zooAnimal = animals[selectedIndexPath.row]
+        default:
+            fatalError("Unexpected segue identifier")
+         }
+
+     }
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        // Pass the selected object to the new view controller
+ 
 
 }

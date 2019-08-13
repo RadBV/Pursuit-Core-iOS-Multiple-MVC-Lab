@@ -16,29 +16,39 @@ class AnimalListTableViewController: UITableViewController {
     }
     
     //MARK: - Properties
-    
+    let animals = ZooAnimalData.zooAnimals
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return animals.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let selectedAnimal = animals[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "animalListCell", for: indexPath) as? AnimalListCell {
+            cell.nameLabel.text = selectedAnimal.name
+            cell.originLabel.text = selectedAnimal.origin
+            cell.animalImage.image = UIImage(named: selectedAnimal.imageNumber.description)
+            
+            return cell
+        }
+        
+        
 
-        // Configure the cell...
-
-        return cell
+        return UITableViewCell()
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

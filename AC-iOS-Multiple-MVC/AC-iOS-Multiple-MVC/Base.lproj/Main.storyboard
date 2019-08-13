@@ -35,7 +35,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T0-Q6-PXz">
-                                            <rect key="frame" x="132" y="30" width="92" height="14.5"/>
+                                            <rect key="frame" x="132" y="33" width="92" height="14.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="zxl-Zv-d9W"/>
                                             </constraints>
@@ -51,7 +51,7 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="4T0-Q6-PXz" firstAttribute="top" secondItem="Ywc-BZ-P3l" secondAttribute="bottom" constant="-2" id="2i2-eO-haj"/>
+                                        <constraint firstItem="4T0-Q6-PXz" firstAttribute="top" secondItem="Ywc-BZ-P3l" secondAttribute="bottom" constant="1" id="2i2-eO-haj"/>
                                         <constraint firstItem="4T0-Q6-PXz" firstAttribute="leading" secondItem="knT-Nr-0FJ" secondAttribute="trailing" constant="16" id="32M-BB-7ew"/>
                                         <constraint firstItem="Ywc-BZ-P3l" firstAttribute="leading" secondItem="knT-Nr-0FJ" secondAttribute="trailing" constant="16" id="8Jh-6p-SVx"/>
                                         <constraint firstAttribute="bottom" secondItem="knT-Nr-0FJ" secondAttribute="bottom" id="8ic-Dh-Xro"/>
@@ -62,8 +62,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="animalImage" destination="knT-Nr-0FJ" id="l63-G0-vUz"/>
-                                    <outlet property="classificationLabel" destination="4T0-Q6-PXz" id="EkC-Ye-MVO"/>
                                     <outlet property="nameLabel" destination="Ywc-BZ-P3l" id="phl-or-R0g"/>
+                                    <outlet property="originLabel" destination="4T0-Q6-PXz" id="Ln5-9Z-bbh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -12,7 +12,7 @@ class AnimalListCell: UITableViewCell {
 
     //MARK: - Properties
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var classificationLabel: UILabel!
+    @IBOutlet weak var originLabel: UILabel!
     @IBOutlet weak var animalImage: UIImageView!
     
     //MARK: - Data Source(?) Methods

@@ -17,31 +17,92 @@ class AnimalListTableViewController: UITableViewController {
     
     //MARK: - Properties
     let animals = ZooAnimalData.zooAnimals
+    let mammals = ZooAnimalData.mammals
+    let amphibians = ZooAnimalData.amphibians
+    let reptiles = ZooAnimalData.reptiles
+    let birds =  ZooAnimalData.birds
+    let insects = ZooAnimalData.insects
     
-    // MARK: - Table view data source
+    // MARK: - Table view data source / delegates
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        return 5
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Mammals"
+        case 1:
+            return "Amphibians"
+        case 2:
+            return "Reptiles"
+        case 3:
+            return "Birds"
+        case 4:
+            return "Insects"
+        default:
+            return "Uhhhhh"
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return animals.count
+        switch  section {
+        case 0:
+            return mammals.count
+        case 1:
+            return amphibians.count
+        case 2:
+            return reptiles.count
+        case 3:
+            return birds.count
+        case 4:
+            return insects.count
+        default:
+            return animals.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let selectedAnimal = animals[indexPath.row]
+        
+        let mammalAnimal = mammals[indexPath.row]
+        
+        let amphibAnimal = amphibians[indexPath.row]
+        
+        let reptileAnimal = reptiles[indexPath.row]
+        let birdAnimal = birds[indexPath.row]
+        let insectAnimal = insects[indexPath.row]
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "animalListCell", for: indexPath) as? AnimalListCell {
-            cell.nameLabel.text = selectedAnimal.name
-            cell.originLabel.text = selectedAnimal.origin
-            cell.animalImage.image = UIImage(named: selectedAnimal.imageNumber.description)
             
+            switch indexPath.section {
+            case 0:
+                cell.nameLabel.text = mammalAnimal.name
+                cell.originLabel.text = mammalAnimal.origin
+                cell.animalImage.image = UIImage(named: mammalAnimal.imageNumber.description)
+            case 1:
+                cell.nameLabel.text = amphibAnimal.name
+                cell.originLabel.text = amphibAnimal.origin
+                cell.animalImage.image = UIImage(named: amphibAnimal.imageNumber.description)
+            case 2:
+                cell.nameLabel.text = reptileAnimal.name
+                cell.originLabel.text = reptileAnimal.origin
+                cell.animalImage.image = UIImage(named: reptileAnimal.imageNumber.description)
+            case 3:
+                cell.nameLabel.text = birdAnimal.name
+                cell.originLabel.text = birdAnimal.origin
+                cell.animalImage.image = UIImage(named: birdAnimal.imageNumber.description)
+            case 4:
+                cell.nameLabel.text = insectAnimal.name
+                cell.originLabel.text = insectAnimal.origin
+                cell.animalImage.image = UIImage(named: insectAnimal.imageNumber.description)
+            default:
+                print("sorry buddy")
+            }
             return cell
         }
         
-        
-
         return UITableViewCell()
     }
     
@@ -49,13 +110,7 @@ class AnimalListTableViewController: UITableViewController {
         return 70
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyBoard.instantiateViewController(withIdentifier: "animalDetailViewController") as? AnimalDetailViewController {
-            viewController.zooAnimal = animals[indexPath.row]
-            navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
+
 
     /*
     // Override to support conditional editing of the table view.
